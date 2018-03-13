@@ -1,4 +1,4 @@
-# ECE-414-project-
+# ECE-414-project
 
 4th year Wireless Communicaton Project 
 
