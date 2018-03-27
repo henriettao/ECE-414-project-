@@ -14,22 +14,22 @@ A0_evenbits=[0 0 0 1 1 1 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 0 1 0 1 1 1 0 1 1 0 1];
 A0_oddbits= [0 1 0 0 1 0 0 0 0 1 0 0 0 1 1 1 1 0 1 1 0 1 1 1 1 0 1 1 1 0 0 0];
 A0=zeros(1,32);
 for b=1:32
-    for k=1:32
-        if(A0_evenbits(b)== 0 && A0_oddbits(b)==0)
-            A0(b)=0;
-        end
-        if(A0_evenbits(b)== 0 && A0_oddbits(b)==1)
-            A0(b)=1;
-        end 
- 
-        if(A0_evenbits(b)== 1 && A0_oddbits(b)==0)
-          A0(b)=2;
-        end 
-        if(A0_evenbits(b)== 1 && A0_oddbits(b)==1)
-          A0(b)=3;
-        end
- 
-    end  
+
+   if(A0_evenbits(b)== 0 && A0_oddbits(b)==0)
+       A0(b)=0;
+   end
+   
+   if(A0_evenbits(b)== 0 && A0_oddbits(b)==1)
+       A0(b)=1;
+   end 
+
+   if(A0_evenbits(b)== 1 && A0_oddbits(b)==0)
+     A0(b)=2;
+   end 
+   
+   if(A0_evenbits(b)== 1 && A0_oddbits(b)==1)
+     A0(b)=3;
+   end     
 end 
 % To generate other symbols A1-A10 circular left shift was applied to A0 
 % used to compare output at reciver from the transmitter 
