@@ -102,7 +102,7 @@ end
 figure();plot (t,Xf);
  
 % impulse response of channel
-% used to form ZF matrix
+% used to form zero forcing matrix
 hn= [1 0.5 0.6 0.2 0.1 0 0 0 0 0 0 0 0 0 0];
 % Question 3 
  
